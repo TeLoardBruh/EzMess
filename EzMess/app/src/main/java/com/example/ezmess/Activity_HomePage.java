@@ -1,32 +1,32 @@
 package com.example.ezmess;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 public class Activity_HomePage extends AppCompatActivity {
+    RecyclerView recyclerView ;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-
-
-        RecyclerView recyler_chat_view = findViewById(R.id.recyler_chat_view);
-
-
+        recyclerView=  findViewById(R.id.recylerView);
+//
+//reference recylerview
+//
+//setup layout
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyler_chat_view.setLayoutManager(layoutManager);
-
-//        set adapter
-
+        recyclerView.setLayoutManager(layoutManager);
+//
+////        set adapter
+//
         Message[] messages = loadMessage();
         MessageAdapter adapter = new MessageAdapter(messages);
-        recyler_chat_view.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
+//        loadMessage();
 
 
     }
@@ -50,7 +50,23 @@ public class Activity_HomePage extends AppCompatActivity {
 
 
         return new Message[]{message1,message2,message3,message4};
-
-
+////
+//    String url = "http://10.0.2.2/dataMessage/data.php";
+//        StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                Gson gson = new Gson();
+//                Message[] messages = gson.fromJson(response,Message[].class);
+//                MessageAdapter adapter = new MessageAdapter(messages);
+//                recyclerView.setAdapter(adapter);
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Toast.makeText(Activity_HomePage.this, "Something error", Toast.LENGTH_SHORT).show();
+//                Log.d("data","Load error : " + error.getMessage());
+//            }
+//        });
+//        Volley.newRequestQueue(this).add(request);
     }
 }

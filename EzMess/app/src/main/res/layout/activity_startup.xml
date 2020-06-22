@@ -38,13 +38,14 @@
         android:background="#363636"
         android:orientation="horizontal"
         >
+
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:background="#B1A70E"
             android:onClick="onButtonLogin"
-            android:layout_marginRight="10dp"
             android:text="login"
             tools:ignore="MissingConstraints"
 
@@ -52,7 +53,7 @@
             tools:layout_editor_absoluteY="559dp" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/button_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#B1A70E"

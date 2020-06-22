@@ -60,8 +60,10 @@
             android:hint="Confirm password" />
 
         <Button
+            android:id="@+id/signup_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onButtonHomePage"
             android:background="#B1A70E"
             android:text="Sign up"
             android:textColor="#ffff" />

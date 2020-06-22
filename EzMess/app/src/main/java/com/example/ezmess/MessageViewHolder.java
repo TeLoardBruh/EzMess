@@ -13,11 +13,15 @@ public class MessageViewHolder extends RecyclerView.ViewHolder {
 
     public MessageViewHolder(@NonNull View itemView) {
         super(itemView);
+        txtSender = itemView.findViewById(R.id.txt_sender);
+        txtText = itemView.findViewById(R.id.txt_text);
+//        txtBody = itemView.findViewById(R.id.txt_body);
+//        imgSender = itemView.findViewById(R.id.img_sender);
     }
 
     public void bind(Message message){
         txtSender.setText(message.getSender());
         txtText.setText(message.getText());
-        txtBody.setText(message.getBody());
+//        txtBody.setText(message.getBody());
     }
 }

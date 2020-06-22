@@ -25,9 +25,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageViewHolder> {
 
         View itemView = layoutInflater.inflate(R.layout.view_holder_message,viewGroup,false);
 
-        MessageViewHolder viewHolder = new MessageViewHolder(itemView);
 
-        return viewHolder;
+        return new MessageViewHolder(itemView);
 
 
     }
@@ -37,7 +36,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageViewHolder> {
 
         Message message = messages[i];
         messageViewHolder.bind(message);
-
     }
 
     @Override

@@ -47,6 +47,8 @@
             android:layout_height="wrap_content"
             android:hint="Password"/>
         <Button
+            android:id="@+id/login_loginpage"
+            android:onClick="onButtonHomePage"
             android:layout_width="wrap_content"
             android:text="Login"
             android:background="#B1A70E"
