@@ -4,7 +4,7 @@ public class Message {
 
     private String sender;
     private String text;
-    private String body;
+    private String senderProfile;
     private long time;
 
     public String getSender() {
@@ -23,12 +23,12 @@ public class Message {
         this.text = text;
     }
 
-    public String getBody() {
-        return body;
+    public String getSenderProfile() {
+        return senderProfile;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setSenderProfile(String senderProfile) {
+        this.senderProfile = senderProfile;
     }
 
     public long getTime() {
