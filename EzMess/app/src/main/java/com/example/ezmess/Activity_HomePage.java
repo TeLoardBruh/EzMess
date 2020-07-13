@@ -1,12 +1,19 @@
 package com.example.ezmess;
 
 import android.app.Application;
+import android.arch.lifecycle.HolderFragment;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.android.volley.Response;
@@ -25,6 +32,9 @@ public class Activity_HomePage extends AppCompatActivity  {
 //        Fresco.initialize(this);
         setContentView(R.layout.activity_homepage);
         recyclerView=  findViewById(R.id.recylerView);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navlistener);
 //
 //reference recylerview
 //
@@ -40,6 +50,48 @@ public class Activity_HomePage extends AppCompatActivity  {
         loadMessage();
 
 
+    }
+//    bottom nav
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navlistener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment selectItem = null;
+
+            if (menuItem.getItemId() == R.id.item_bottom_2){
+                selectItem = new SettingFragment();
+            }
+            else if (menuItem.getItemId() == R.id.item_bottom_1){
+                selectItem =  new HomeFragment();
+            }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,
+                    selectItem).commit();
+            return true;
+        }
+
+    };
+//    menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+    MenuInflater menuInflater = getMenuInflater();
+    menuInflater.inflate(R.menu.menu, menu);
+    return true;
+
+}
+    // To detect when user clicked on items of the options menu
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.item_1) {
+            Toast.makeText(this, R.string.item_1, Toast.LENGTH_LONG).show();
+        } else if (item.getItemId() == R.id.item_2){
+            Toast.makeText(this, R.string.item_2, Toast.LENGTH_LONG).show();
+        } else if (item.getItemId() == R.id.item_3){
+            Toast.makeText(this, R.string.item_3, Toast.LENGTH_LONG).show();
+        }
+
+        return true;
     }
     private void loadMessage(){
 //        dummy data

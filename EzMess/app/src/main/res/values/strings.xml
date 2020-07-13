@@ -20,4 +20,11 @@
     <string name="login_here">Login here</string>
     <string name="sign_up">Sign up</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="item_2">Item 2</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_3">Item 3</string>
+    <string name="home">home</string>
+    <string name="setting">setting</string>
+    <string name="contact">contact</string>
+    <string name="setting_fragment">setting_fragment</string>
 </resources>
