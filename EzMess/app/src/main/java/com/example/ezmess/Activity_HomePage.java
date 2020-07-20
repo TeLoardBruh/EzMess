@@ -27,7 +27,7 @@ public class Activity_HomePage extends AppCompatActivity  {
     RecyclerView recyclerView ;
     private ProgressBar progressBar;
     private MessageAdapter.RecyclerViewClickListener listener;
-    private Message messageList;
+    private Message[] messageList;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +92,8 @@ public class Activity_HomePage extends AppCompatActivity  {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.item_1) {
             Toast.makeText(this, R.string.item_1, Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getBaseContext(), FriendsActivity.class);
+            startActivity(intent);
         } else if (item.getItemId() == R.id.item_2){
             Toast.makeText(this, R.string.item_2, Toast.LENGTH_LONG).show();
         } else if (item.getItemId() == R.id.item_3){

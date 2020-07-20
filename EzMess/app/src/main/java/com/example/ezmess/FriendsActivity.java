@@ -22,12 +22,12 @@ public class FriendsActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friendsactivity);
-        recyclerView =  findViewById(R.id.recylerfriendactivity);
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        loadMessage();
+//        recyclerView =  findViewById(R.id.recylerfriendactivity);
+//
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
+//
+//        loadMessage();
     }
 
     private void loadMessage(){

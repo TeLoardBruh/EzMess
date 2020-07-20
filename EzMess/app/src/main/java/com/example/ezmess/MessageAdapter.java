@@ -45,6 +45,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             txtSender = itemView.findViewById(R.id.txt_sender);
             txtText = itemView.findViewById(R.id.txt_text);
             imgSender = itemView.findViewById(R.id.img_sender);
+
+
+
 //        senderProfile = itemView.findViewById(R.id.img_sender);
             itemView.setOnClickListener(this);
 
