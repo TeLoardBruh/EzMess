@@ -6,10 +6,25 @@
     android:padding="8dp"
     android:orientation="horizontal">
 
-    <ImageView
+<!--    <ImageView-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:id="@+id/img_sender" />-->
+
+<!--    <com.facebook.drawee.view.SimpleDraweeView-->
+<!--        android:id="@+id/img_sender"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:placeholderImage="@drawable/ic_action_name"-->
+<!--        app:roundAsCircle="true" />-->
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_sender"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id="@+id/img_sender" />
+        app:placeholderImage="@drawable/ic_action_name"
+        app:roundAsCircle="true" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +41,9 @@
             android:text="Text"
             android:id="@+id/txt_text"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
+
 
 
 </LinearLayout>

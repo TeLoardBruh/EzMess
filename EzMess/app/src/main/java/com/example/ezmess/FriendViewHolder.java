@@ -13,8 +13,8 @@ public class FriendViewHolder  extends RecyclerView.ViewHolder {
 
     public FriendViewHolder(@NonNull View itemView) {
         super(itemView);
-        txtSender = itemView.findViewById(R.id.txt_sender);
-        txtText = itemView.findViewById(R.id.txt_text);
+        txtSender = itemView.findViewById(R.id.txt_sender_1);
+        txtText = itemView.findViewById(R.id.txt_text_1);
 //        senderProfile = itemView.findViewById(R.id.img_sender);
 
 //        txtBody = itemView.findViewById(R.id.txt_body);

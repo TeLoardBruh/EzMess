@@ -1,5 +1,6 @@
 package com.example.ezmess;
 
+
 public class Message {
 
     private String sender;
